@@ -11,6 +11,6 @@
         <module>wuyu-core</module>  
         <module>wuyu-common</module>
         <module>wuyu-util</module>
-    <module>wuyu-learning</module>
+    	<module>wuyu-learning</module>
   </modules>  
 </project>
