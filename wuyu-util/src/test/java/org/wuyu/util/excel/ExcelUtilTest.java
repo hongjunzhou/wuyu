@@ -16,17 +16,16 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = { "/applicationContext-test.xml" })
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)  
 public class ExcelUtilTest {
-	
 	@Resource
 	private ExcelUtil excelUtil;
 	
-
 	@Test  
 	public void createExcelTest() {
 		List<User> dataSource = new ArrayList<User>();
 		User user = new User();
 		user.setId(1l);
-		user.setName("wuyu");
+		
+		user.setName("hello world");
 		dataSource.add(user);
 		excelUtil.createExcel(dataSource, "org.wuyu.util.excel.User", "d:/excel/user.xls","d:/excel/user.xls.tmp", 10);
 	}

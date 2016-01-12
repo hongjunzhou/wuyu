@@ -100,13 +100,13 @@
        <level value="INFO" />
   </logger>    
   <logger name="org.wuyu">
-       <level value="INFO" />
+       <level value="debug" />
   </logger>   
    
    
   
     <!-- 输出到控制台和文件，可定义更多的 Appender -->
-  <root level="INFO">
+  <root level="debug">
     <appender-ref ref="stdout" />
     <appender-ref ref="InfoRollingFile"/>
   </root>
