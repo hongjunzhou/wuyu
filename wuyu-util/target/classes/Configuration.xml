@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration     
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"     
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+
+
+	<typeAliases>
+		<typeAlias type="com.myyule.ad.model.User" alias="User" />
+		<typeAlias type="com.myyule.ad.model.AdMaterials" alias="AdMaterials" />
+		<typeAlias type="com.myyule.ad.model.Advertising" alias="Advertising" />
+		<typeAlias type="com.myyule.ad.model.Channel" alias="Channel" />
+		<typeAlias type="com.myyule.ad.model.Group" alias="Group" />
+		<typeAlias type="com.myyule.ad.model.Materials" alias="Materials" />
+		<typeAlias type="com.myyule.ad.model.Site" alias="Site" />
+		<typeAlias type="com.myyule.ad.model.Template" alias="Template" />
+		<typeAlias type="com.myyule.ad.model.Ad" alias="Ad" />
+	</typeAliases>
+	
+	<typeHandlers>  
+    	<typeHandler javaType="Boolean" jdbcType="CHAR" handler="com.myyule.mybatis.handler.BooleanTypeHandler" />
+    	<!--  
+    	<typeHandler javaType="com.myyule.mybatis.test.model.Descp" jdbcType="VARCHAR" handler="com.myyule.mybatis.handler.JSONHandler"/>
+    	-->
+    	 
+    </typeHandlers> 
+    
+</configuration>
