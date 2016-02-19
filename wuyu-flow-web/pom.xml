@@ -21,7 +21,65 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
   <build>
-    <finalName>wuyu-flow-web</finalName>
-  </build>
+		<finalName>wuyu-web-flow</finalName>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+
+			</resource>
+		</resources>
+
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+
+				<configuration>
+					<webResources>
+						<resource>
+							<filtering>true</filtering>
+							<directory>src/main/webapp</directory>
+							<includes>
+								<include>**/*.js</include>
+								<include>**/*.properties</include>
+								<include>**/*.jsp</include>
+								<include>**/*.xml</include>
+							</includes>
+						</resource>
+					</webResources>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+
+				<configuration>
+					<scanIntervalSeconds>0</scanIntervalSeconds>
+
+					<webAppConfig>
+						<contextPath>/</contextPath>
+						<defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor>
+					</webAppConfig>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
 </project>
